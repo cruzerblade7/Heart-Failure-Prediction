@@ -58,11 +58,11 @@ with left_column:
         np.unique(data['ST_Slope'])
     )
 
-inp_Age = st.slider('Age(years)', 0, max(data['Age']))
+inp_Age = st.slider('Age(years)', 0, 100)
 inp_RestingBP = st.slider('Resting Blood Pressure(mm Hg)', 0, max(data['RestingBP']))
-inp_Cholesterol = st.slider('Serum Cholesterol(mm/dl)', 0, max(data['Cholesterol']))
-inp_MaxHR = st.slider('Maximum Heart Rate Achieved(/min)', 0, max(data['MaxHR']))
-inp_Oldpeak = st.slider('OldPeak: ST Depression', -3.0, max(data['Oldpeak']))
+inp_Cholesterol = st.slider('Serum Cholesterol(mm/dl)', 0, 700)
+inp_MaxHR = st.slider('Maximum Heart Rate Achieved(/min)', 0, 250)
+inp_Oldpeak = st.slider('OldPeak: ST Depression', -3.0, 7.0)
 
 if st.button('Make Prediction'):
     inp_Sex = Sex_le.transform(np.expand_dims(inp_Sex, -1))
