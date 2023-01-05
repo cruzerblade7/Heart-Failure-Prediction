@@ -2,4 +2,4 @@ __pycache__/
 Model/
 Encodings/
 venv/
-*.csv
+heart*
